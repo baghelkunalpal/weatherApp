@@ -17,16 +17,15 @@ function App() {
 
   return (
     <div className='w-full h-screen text-white px-8'>
-      <nav className='w-full p-3 flex justify-between items-center'>
-        <h1 className='font-bold tracking-wide text-3xl'>Weather App</h1>
+      <nav className='w-full p-3 flex justify-between flex-wrap items-center'>
+        <h1 className='font-bold tracking-wide text-3xl text-black'>Weather App</h1>
         <div className='bg-white w-[15rem] overflow-hidden shadow-2xl rounded flex items-center p-2 gap-2'>
           <img src={search} alt="search" className='w-[1.5rem] h-[1.5rem]' />
           <input onKeyUp={(e) => {
             if (e.key === 'Enter') {
-              // sumit the form
               submitCity()
             }
-          }} type="text" placeholder='Search city' className='focus:outline-none w-full text-[#212121] text-lg' value={input} onChange={e => setInput(e.target.value)} />
+          }} type="text" placeholder='Search for any city..' className='focus:outline-none ring-2 rounded-lg p-1 w-full text-[#341212] text-lg' value={input} onChange={e => setInput(e.target.value)} />
         </div>
       </nav>
       <BackgroundLayout></BackgroundLayout>
